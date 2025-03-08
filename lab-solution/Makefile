@@ -92,7 +92,7 @@ dbg:
 	export QEMU_FLAGS="$(QEMU_FLAGS)"
 	export mos_elf="$(mos_elf)"
 	setsid ./tools/run_bg.sh $$$$ &
-	exec gdb-multiarch -q $(mos_elf) -ex "target remote localhost:1234" $(dbg_elf)
+	exec gdb -q $(mos_elf) -ex "target remote localhost:1234" $(dbg_elf)
 
 dbg_pts: QEMU_FLAGS += -serial "pty"
 dbg_pts: dbg
