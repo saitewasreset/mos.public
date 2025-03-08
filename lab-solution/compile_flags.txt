@@ -1,0 +1,6 @@
+-I./include 
+-Wall 
+-Wextra 
+-ffreestanding 
+-fno-stack-protector 
+-fno-builtin
